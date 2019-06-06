@@ -51,7 +51,12 @@ echo "you are not authorized to view this page";
 		<tbody>
 
 		<?php
-		
+		//Query Statement or Command...
+		$q = "";
+		//Get The Data (Takes the Query Statament/Command to the Database and brings back the result...
+		$g = mysqli_query($q,$conn) or die($conn->error);
+		//Setup the Results using what was brought back from the database...allows data to be readable by user
+		$r = mysqli_fetch_array($g);
 		
 		?>
 
