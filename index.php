@@ -2,6 +2,9 @@
  $user_name = "Michael Burton.";
  $logged_in = "yes";
 
+/* comments are written within php code below to break down what every step means: */
+
+
 //Check to see if the $logged_in variable is set to yes...
 if($logged_in == "yes") {
 //Display the word welcome.
@@ -11,8 +14,6 @@ echo "welcome";
 echo "you are not authorized to view this page";
 break;//This shuts down everything after this command. It breaks the program.
 }
-
-/* php code above means: 
 
  ?>
 
