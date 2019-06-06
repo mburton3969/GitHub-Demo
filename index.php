@@ -1,7 +1,18 @@
 <?php 
  $user_name = "Michael Burton.";
  $logged_in = "yes";
+
+if($logged_in == "yes") {
+echo "welcome";
+}else{ 
+echo "you are not authorized to view this page";
+break;
+}
+
+/* php code above means: 
+
  ?>
+
 
 
 <html>
