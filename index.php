@@ -6,13 +6,13 @@
 
 
 //Check to see if the $logged_in variable is set to yes...
-if($logged_in == "yes") {
+/*if($logged_in == "yes") {
 //Display the word welcome.
 echo "welcome";
 }else{ //If not logged in...
 //Display message
 echo "you are not authorized to view this page";
-}
+}*/
 
  ?>
 
@@ -28,12 +28,48 @@ echo "you are not authorized to view this page";
 		<p>My name is <?php echo $user_name; ?><p>
 
 			<?php
-			$i = 0;  
+			/*$i = 0;  
 			while($i < 10){
 				echo "Hello";
 				$i++;
-			}
+			}*/
 			?>
+
 	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Color</th>
+				<th>INACTIVE</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		<?php
+		//Database connection credentials...
+		$host = 'localhost';
+		$user = 'root';
+		$pass = 'root';
+		$db = 'demo';
+		//Makes connection to the database...
+		$conn = mysqli_connect($host,$user,$pass,$db) or die($conn->error);
+
+		
+		?>
+
+			<tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>Color</td>
+				<td>INACTIVE</td>
+			</tr>
+		</tbody>
+
+	</table>
+
+
 </body>
 </html>
