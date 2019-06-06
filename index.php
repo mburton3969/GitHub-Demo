@@ -1,4 +1,5 @@
 <?php 
+error_reporting(E_ALL);
 include "connection.php";
 
  $user_name = "Michael Burton.";
@@ -52,11 +53,14 @@ echo "you are not authorized to view this page";
 
 		<?php
 		//Query Statement or Command...
-		$q = "";
+		$q = "SELECT * FROM `favorite_colors`";
 		//Get The Data (Takes the Query Statament/Command to the Database and brings back the result...
-		$g = mysqli_query($q,$conn) or die($conn->error);
+		$g = mysqli_query($conn, $q) or die($conn->error);
 		//Setup the Results using what was brought back from the database...allows data to be readable by user
 		$r = mysqli_fetch_array($g);
+		echo $r['Name'];
+
+
 		
 		?>
 
