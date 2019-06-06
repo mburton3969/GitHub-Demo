@@ -2,6 +2,10 @@
  $user_name = "Michael Burton.";
  ?>
 
+<?php 
+$logged_in = "yes";
+
+?>
 
 <html>
 <head>
