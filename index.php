@@ -1,11 +1,8 @@
 <?php 
  $user_name = "Michael Burton.";
+ $logged_in = "yes";
  ?>
 
-<?php 
-$logged_in = "yes";
-
-?>
 
 <html>
 <head>
