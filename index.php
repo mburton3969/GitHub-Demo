@@ -26,6 +26,14 @@ echo "you are not authorized to view this page";
 	<div>
 		<h1>This is a demo site for testing</h1>
 		<p>My name is <?php echo $user_name; ?><p>
+
+			<?php
+			$i = 0;  
+			while($i < 10){
+				echo "Hello";
+				$i++;
+			}
+			?>
 	</div>
 </body>
 </html>
