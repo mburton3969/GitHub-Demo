@@ -57,19 +57,58 @@ echo "you are not authorized to view this page";
 		//Get The Data (Takes the Query Statament/Command to the Database and brings back the result...
 		$g = mysqli_query($conn, $q) or die($conn->error);
 		//Setup the Results using what was brought back from the database...allows data to be readable by user
-		$r = mysqli_fetch_array($g);
-		echo $r['Name'];
+		while($r = mysqli_fetch_array($g)){
+			echo '<tr>
+					<td>' . $r['ID'] . '</td>
+					<td>' . $r['Name'] . '</td>
+					<td>' . $r['Color'] . '</td>
+					<td>' . $r['INACTIVE'] . '</td>
+				  </tr>';
+		}
+
+
+
+
+
 
 
 		
+		//INSERT New Data into Database...
+		$iq = "INSERT INTO `favorite_colors`
+				(
+				`NAME`,
+				`Color`,
+				`INACTIVE`
+				)
+				VALUES
+				(
+				'Johnny Boy',
+				'Black',
+				'No'
+				)";
+		//Run the Query Statement in the database...
+		//$ig = mysqli_query($conn, $iq) or die($conn->error);
+		
+
+
+
+
+
+
+
+
+		//Update a current database record...
+		$uq = "UPDATE `favorite_colors` SET `INACTIVE` = 'Yes' WHERE `ID` = '2'";
+		//Run the Query Statement in the database...
+		//$ug = mysqli_query($conn, $uq) or die($conn->error);
+
+
+
+
+
 		?>
 
-			<tr>
-				<td>ID</td>
-				<td>Name</td>
-				<td>Color</td>
-				<td>INACTIVE</td>
-			</tr>
+			
 		</tbody>
 	</table>
 
