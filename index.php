@@ -12,7 +12,6 @@ echo "welcome";
 }else{ //If not logged in...
 //Display message
 echo "you are not authorized to view this page";
-break;//This shuts down everything after this command. It breaks the program.
 }
 
  ?>
