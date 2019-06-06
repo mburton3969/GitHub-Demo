@@ -41,20 +41,32 @@ echo "you are not authorized to view this page";
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>NAME</th>
-				<th>COLOR</th>
+				<th>Name</th>
+				<th>Color</th>
 				<th>INACTIVE</th>
 			</tr>
-			<tbody>
-				<tr>
-					<td>ID</td>
-					<td>NAME</td>
-					<td>COLOR</td>
-					<td>INACTIVE</td>
-				</tr>
-			</tbody>
-
 		</thead>
+		<tbody>
+
+		<?php
+		//Database connection credentials...
+		$host = 'localhost';
+		$user = 'root';
+		$pass = 'root';
+		$db = 'demo';
+		//Makes connection to the database...
+		$conn = mysqli_connect($host,$user,$pass,$db) or die($conn->error);
+
+		
+		?>
+
+			<tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>Color</td>
+				<td>INACTIVE</td>
+			</tr>
+		</tbody>
 	</table>
 
 
