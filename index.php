@@ -2,11 +2,14 @@
  $user_name = "Michael Burton.";
  $logged_in = "yes";
 
+//Check to see if the $logged_in variable is set to yes...
 if($logged_in == "yes") {
+//Display the word welcome.
 echo "welcome";
-}else{ 
+}else{ //If not logged in...
+//Display message
 echo "you are not authorized to view this page";
-break;
+break;//This shuts down everything after this command. It breaks the program.
 }
 
 /* php code above means: 
