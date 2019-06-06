@@ -1,4 +1,6 @@
 <?php 
+include "connection.php";
+
  $user_name = "Michael Burton.";
  $logged_in = "yes";
 
@@ -49,14 +51,7 @@ echo "you are not authorized to view this page";
 		<tbody>
 
 		<?php
-		//Database connection credentials...
-		$host = 'localhost';
-		$user = 'root';
-		$pass = 'root';
-		$db = 'demo';
-		//Makes connection to the database...
-		$conn = mysqli_connect($host,$user,$pass,$db) or die($conn->error);
-
+		
 		
 		?>
 
